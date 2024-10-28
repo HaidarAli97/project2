@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.canvas {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0A0C1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .con {
+        max-width: 1100px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: row-reverse;
+
+        .con1,
+        .con2 {
+            flex-basis: 45%;
+            padding: 4rem;
+        }
+
+        .con1 {
+
+            background-image: url(../assets/image-header-desktop.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                background: rgba(81, 17, 121, 0.562);
+
+            }
+
+        }
+
+        .con2 {
+            background-color: #1C1938;
+            color: #fff;
+            border-top-left-radius: 3%;
+            border-bottom-left-radius: 3%;
+            // padding: 5rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            span {
+                color: #AD60DD;
+            }
+
+            p {
+                // max-width: 500px;
+                margin-bottom: 5rem;
+                line-height: 1.5;
+                font-size: .9rem;
+                color: #A09EB8;
+
+            }
+
+            .sub-con {
+                max-width: 300px;
+                display: flex;
+                justify-content: space-between;
+
+
+                .sub {
+                    color: #A09EB8;
+                    font-size: .9rem;
+                }
+
+                b {
+                    font-size: 1.3rem;
+                    color: #fff;
+                }
+            }
+
+
+        }
+    }
+
+
+    @media (width <=760px) {
+        .con {
+
+            display: flex;
+            flex-direction: column;
+
+            .sub-con {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .con1,
+            .con2 {
+                text-align: center;
+                flex-basis: 50%;
+            }
+
+
+            .sub {
+                margin-bottom: 50px;
+            }
+        }
+
+
+    }
+
+
+}
